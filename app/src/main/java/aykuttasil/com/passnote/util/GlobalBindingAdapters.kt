@@ -1,10 +1,7 @@
 package aykuttasil.com.passnote.util
 
-import android.databinding.BindingAdapter
-import android.graphics.drawable.Drawable
+import androidx.databinding.BindingAdapter
 import android.view.View
-import android.widget.ImageView
-import aykuttasil.com.passnote.di.modules.GlideApp
 
 /**
  * Created by aykutasil on 19.12.2017.
@@ -22,6 +19,7 @@ class GlobalBindingAdapters {
          * @param blurValue   The blur radius value between 1 and 25.
          * @param cropCircle  Crop the image in a circle of not.
          */
+        /*
         @JvmStatic
         @SuppressWarnings("unchecked")
         @BindingAdapter(value = arrayOf("src", "placeholder", "error", "blur", "cropCircle"), requireAll = false)
@@ -49,6 +47,7 @@ class GlobalBindingAdapters {
                 glideBuilder.into(view)
             }
         }
+        */
 
         @JvmStatic
         @BindingAdapter("visibleGone")

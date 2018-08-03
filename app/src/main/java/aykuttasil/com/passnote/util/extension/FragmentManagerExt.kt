@@ -1,7 +1,7 @@
 package aykuttasil.com.passnote.util.extension
 
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 
 
 inline fun FragmentManager.transaction(func: FragmentTransaction.() -> FragmentTransaction) {

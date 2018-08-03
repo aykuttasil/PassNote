@@ -1,9 +1,9 @@
 package aykuttasil.com.passnote.util.extension
 
 
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.Observer
-import android.support.design.widget.Snackbar
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
+import com.google.android.material.snackbar.Snackbar
 import android.view.View
 import aykuttasil.com.passnote.util.SingleLiveEvent
 

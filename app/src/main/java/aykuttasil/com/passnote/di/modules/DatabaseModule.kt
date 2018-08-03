@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.di.modules
 
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import android.content.Context
 import aykuttasil.com.passnote.data.AppDatabase
 import aykuttasil.com.passnote.di.ApplicationContext

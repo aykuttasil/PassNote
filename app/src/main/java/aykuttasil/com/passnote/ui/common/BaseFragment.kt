@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.ui.common
 
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 
 /**
  * Created by aykutasil on 14.12.2017.

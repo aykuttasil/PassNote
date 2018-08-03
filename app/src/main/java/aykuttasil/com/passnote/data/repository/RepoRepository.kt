@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.data.repository
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import aykuttasil.com.passnote.data.Resource
 import aykuttasil.com.passnote.data.remote.ApiResponse
 import aykuttasil.com.passnote.data.remote.ApiService

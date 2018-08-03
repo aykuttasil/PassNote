@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.util.converter
 
-import android.arch.persistence.room.TypeConverter
+import androidx.room.TypeConverter
 import java.util.*
 
 /**

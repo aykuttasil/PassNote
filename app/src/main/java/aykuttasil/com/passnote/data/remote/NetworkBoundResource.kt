@@ -1,9 +1,9 @@
 package aykuttasil.com.passnote.data.remote
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MediatorLiveData
-import android.support.annotation.MainThread
-import android.support.annotation.WorkerThread
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
+import androidx.annotation.MainThread
+import androidx.annotation.WorkerThread
 import aykuttasil.com.passnote.data.Resource
 import aykuttasil.com.passnote.util.ioThread
 import aykuttasil.com.passnote.util.mainThread

@@ -1,7 +1,7 @@
 package aykuttasil.com.passnote.data.local.dao
 
-import android.arch.lifecycle.LiveData
-import android.arch.persistence.room.*
+import androidx.lifecycle.LiveData
+import androidx.room.*
 import aykuttasil.com.passnote.data.local.entity.UserEntity
 import io.reactivex.Flowable
 

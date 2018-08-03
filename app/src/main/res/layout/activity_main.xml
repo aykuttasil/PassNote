@@ -18,13 +18,13 @@
             type="aykuttasil.com.passnote.ui.common.RetryCallback" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="aykuttasil.com.passnote.ui.main.MainActivity">
 
-        <android.support.design.widget.BottomNavigationView
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -149,5 +149,5 @@
             app:layout_constraintTop_toTopOf="parent"
             app:resource="@{resource}" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

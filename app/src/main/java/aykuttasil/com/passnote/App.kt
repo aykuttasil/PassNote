@@ -6,7 +6,7 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
-import android.support.multidex.MultiDex
+import androidx.multidex.MultiDex
 import aykuttasil.com.passnote.di.AppInjector
 import aykuttasil.com.passnote.util.Const
 import aykuttasil.com.passnote.util.extension.debug

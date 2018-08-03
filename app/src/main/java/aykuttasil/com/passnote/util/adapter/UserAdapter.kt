@@ -1,7 +1,7 @@
 package aykuttasil.com.passnote.util.adapter
 
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import aykuttasil.com.passnote.data.local.entity.UserEntity

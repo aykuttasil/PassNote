@@ -1,7 +1,7 @@
 package aykuttasil.com.passnote.di
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import aykuttasil.com.passnote.di.key.ViewModelKey
 import aykuttasil.com.passnote.ui.main.MainViewModel
 import aykuttasil.com.passnote.ui.user.UserViewModel

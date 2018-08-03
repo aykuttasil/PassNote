@@ -1,7 +1,7 @@
 package aykuttasil.com.passnote.util.livedata
 
 import android.annotation.SuppressLint
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import android.content.Context
 import android.location.Location
 import android.util.Log

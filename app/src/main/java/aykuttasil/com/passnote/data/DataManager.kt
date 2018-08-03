@@ -1,6 +1,6 @@
 package aykuttasil.com.myandroidstructure.data
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import aykuttasil.com.passnote.data.IDataManager
 import aykuttasil.com.passnote.data.Resource
 import aykuttasil.com.passnote.data.local.entity.LocationEntity

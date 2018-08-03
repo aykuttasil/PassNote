@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.util
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import aykuttasil.com.passnote.data.remote.ApiResponse
 import retrofit2.Call
 import retrofit2.CallAdapter

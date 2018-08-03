@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.data
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import aykuttasil.com.passnote.data.local.entity.LocationEntity
 import aykuttasil.com.passnote.data.local.entity.UserEntity
 

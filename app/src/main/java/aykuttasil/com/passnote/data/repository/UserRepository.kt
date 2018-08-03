@@ -1,7 +1,7 @@
 package aykuttasil.com.passnote.data.repository
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.Transformations
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Transformations
 import aykuttasil.com.passnote.data.Resource
 import aykuttasil.com.passnote.data.local.dao.UserDao
 import aykuttasil.com.passnote.data.local.entity.UserEntity

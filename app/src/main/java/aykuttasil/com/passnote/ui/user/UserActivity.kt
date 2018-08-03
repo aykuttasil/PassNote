@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.ui.user
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import aykuttasil.com.passnote.R
 import aykuttasil.com.passnote.databinding.ActivityUserBinding

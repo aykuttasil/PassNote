@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.ui.user
 
-import android.arch.lifecycle.AndroidViewModel
+import androidx.lifecycle.AndroidViewModel
 import aykuttasil.com.myandroidstructure.data.DataManager
 import aykuttasil.com.passnote.App
 import javax.inject.Inject

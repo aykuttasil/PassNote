@@ -1,8 +1,8 @@
 package aykuttasil.com.passnote.util;
 
 
-import android.arch.lifecycle.LiveData;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.annotation.NonNull;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.ParameterizedType;

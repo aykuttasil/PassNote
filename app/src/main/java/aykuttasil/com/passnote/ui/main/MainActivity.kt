@@ -1,13 +1,13 @@
 package aykuttasil.com.passnote.ui.main
 
 import android.app.Activity
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
-import android.support.design.widget.BottomNavigationView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import aykuttasil.com.passnote.R
 import aykuttasil.com.passnote.databinding.ActivityMainBinding
 import aykuttasil.com.passnote.di.ViewModelFactory

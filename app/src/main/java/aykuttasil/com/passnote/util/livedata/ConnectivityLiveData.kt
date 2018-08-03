@@ -1,11 +1,11 @@
 package aykuttasil.com.passnote.util.livedata
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
 import android.os.Build
-import android.support.annotation.RequiresApi
+import androidx.annotation.RequiresApi
 
 /**
  * Created by aykutasil on 27.12.2017.

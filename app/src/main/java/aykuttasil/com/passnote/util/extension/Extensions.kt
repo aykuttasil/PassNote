@@ -2,19 +2,19 @@ package aykuttasil.com.passnote.util.extension
 
 import android.app.Activity
 import android.content.Context
-import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Point
 import android.graphics.Rect
 import android.graphics.drawable.Drawable
 import android.net.ConnectivityManager
-import android.support.design.widget.Snackbar
-import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.SnapHelper
+import com.google.android.material.snackbar.Snackbar
+import androidx.fragment.app.Fragment
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import android.text.Editable
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -22,19 +22,19 @@ import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.*
 import android.view.inputmethod.InputMethodManager
-import android.widget.ImageView
 import android.widget.Toast
-import com.bumptech.glide.Glide
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 
 
+/*
 fun ImageView.loadImageFromUrl(url: String) {
     Glide.with(context)
             .load(url)
             .into(this)
 }
+*/
 
 fun Activity.hideKeyboard() {
     val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -349,7 +349,7 @@ fun SnapHelper.snapToPosition(recyclerView: RecyclerView, position: Int) {
     recyclerView.apply {
         val view = findViewHolderForAdapterPosition(position)?.itemView
         val snapPositions = view?.let {
-            calculateDistanceToFinalSnap(layoutManager, it)
+            layoutManager?.let { it1 -> calculateDistanceToFinalSnap(it1, it) }
         }
 
         snapPositions?.let { smoothScrollBy(it[0], it[1]) }

@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.util.livedata
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 
 /**
  * Helper class for transmitting an empty LiveData - Pretty useful!

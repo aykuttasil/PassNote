@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.data.remote
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import aykuttasil.com.passnote.data.remote.model.Repo
 import aykuttasil.com.passnote.data.remote.model.User
 import retrofit2.http.GET

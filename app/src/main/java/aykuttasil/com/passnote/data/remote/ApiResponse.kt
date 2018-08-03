@@ -1,6 +1,6 @@
 package aykuttasil.com.passnote.data.remote
 
-import android.support.v4.util.ArrayMap
+import androidx.collection.ArrayMap
 import android.util.Log
 import retrofit2.Response
 import java.io.IOException

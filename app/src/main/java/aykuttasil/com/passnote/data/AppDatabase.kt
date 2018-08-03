@@ -1,8 +1,8 @@
 package aykuttasil.com.passnote.data
 
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.RoomDatabase
-import android.arch.persistence.room.TypeConverters
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import aykuttasil.com.passnote.data.local.dao.LocationDao
 import aykuttasil.com.passnote.data.local.dao.UserDao
 import aykuttasil.com.passnote.data.local.entity.LocationEntity
