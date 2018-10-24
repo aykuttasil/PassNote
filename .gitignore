@@ -56,3 +56,8 @@ freeline.py
 freeline/
 freeline_project_description.json
 PassNote.zip
+/app/aykutasilkeystore
+/keystore.properties
+/aykutasilkeystore
+/app/release/
+/screenshot/
