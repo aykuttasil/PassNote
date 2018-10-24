@@ -102,10 +102,12 @@ fun Fragment.getDrawableCompat(drawableResId: Int) = context?.getDrawableCompat(
  */
 fun View.getString(stringResId: Int): String = resources.getString(stringResId)
 
+fun View.showKeyboard(delay: Long, flags: Int = 0) = postDelayed({ showKeyboard(flags) }, delay)
+
 /**
  * Extension method to provide show keyboard for View.
  */
-fun View.showKeyboard() {
+fun View.showKeyboard(flags: Int = 0) {
     val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     this.requestFocus()
     imm.showSoftInput(this, 0)

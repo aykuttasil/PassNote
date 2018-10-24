@@ -29,4 +29,77 @@
     <string name="repo_full_name"><b>%s</b>/%s</string>
     <string name="empty_search_result">No results for <b>%s</b></string>
     <string name="a11y_contributor_avatar">contributor avatar</string>
+
+    <string name="home_empty_view_title">Liste Boş</string>
+    <string name="add_secret_title">Ekle</string>
+
+    <!--Fingerprint Sample Dialog strings-->
+    <string name="authentication_ok">Tamam</string>
+    <string name="authentication_cancel">İptal et</string>
+    <string name="authentication_title">Doğrulama</string>
+    <string name="authentication_use_password">Parola Kullan</string>
+    <string name="authentication_password">Parola</string>
+    <string name="authentication_password_description">Devam etmek için Parola gir</string>
+    <string name="authentication_error_incorrect_password">Parola yanlış</string>
+    <string name="authentication_fingerprint_description">Parmak izini doğrula</string>
+    <string name="authentication_fingerprint_hint">Parmak izi Sensörü</string>
+    <string name="authentication_fingerprint_not_recognized">Parmak izi tanınmadı. Tekrar deneyiniz.</string>
+    <string name="authentication_fingerprint_success">Parmak izi tanındı</string>
+    <string name="authentication_fingerprint_new_enrollment_description">Yeni parmak izi tanımlaması yapıldı. Bu nedenle şifreniz gerekmektedir.</string>
+    <string name="authentication_fingerprint_use_in_future">Use fingerprint in the future</string>
+    <string name="authentication_fingerprint_icon_description">Fingerprint icon</string>
+    <string name="authentication_fingerprint_use_to_authenticate_key">use_fingerprint_to_authenticate_key</string>
+
+    <!-- Strings related to home screen -->
+    <string name="home_menu_reset">Sıfırla</string>
+    <string name="home_menu_fingerprint">Parmak izi Kullan</string>
+
+    <!-- Strings related to sign up -->
+    <string name="sign_up_activity_title">Kayıt Ol</string>
+    <string name="sign_up_prompt_password">Şifre Gir</string>
+    <string name="sign_up_prompt_confirm_password">Şifreyi Onayla</string>
+    <string name="sign_up_action_done">Tamam</string>
+    <string name="sign_up_action_done_short">Tamam</string>
+
+    <string name="sign_up_error_invalid_password">Şifre çok kısa</string>
+    <string name="sign_up_error_incorrect_password">Şifre yanlış</string>
+    <string name="sign_up_allow_fingerprint">Sonraki kullanımlar için Parmak izini kullan</string>
+    <string name="sign_up_bottom_hint">Notlarınızı güvende tutmak için bir şifre belirleyiniz.</string>
+    <string name="sign_up_welcome">Hoşgeldiniz</string>
+    <string name="sign_up_snack_message">En az bir tane parmak izi tanımlanmalıdır.</string>
+    <string name="sign_up_snack_action">AYARLAR</string>
+
+    <!-- Strings related to add secret -->
+    <string name="prompt_alias">Konu</string>
+    <string name="prompt_secret">Mesaj</string>
+    <string name="action_save_in_short">Kaydet</string>
+    <string name="error_incorrect_alias">Konu boş olamaz</string>
+    <string name="error_duplicated_alias">Konu zaten mevcut.</string>
+    <string name="secret_error_empty_secret">Mesaj boş olamaz</string>
+    <string name="secret_menu_done">Kaydet</string>
+    <string name="secret_menu_edit">Düzenle</string>
+    <string name="secret_menu_delete">Sil</string>
+    <string name="secret_created_date">Oluşturuldu %s</string>
+    <string name="secret_updated_date">Güncellendi %s</string>
+
+    <!--Progress-->
+    <string name="check_environment_lab">Environment\'s being checked</string>
+    <string name="warning_ttl">Uyarı</string>
+    <string name="gms_not_ready_msg">GMS not ready</string>
+    <string name="exit_btn">Çıkış yap</string>
+    <string name="proceed_btn">Proceed Anyway</string>
+    <string name="secure_success_msg">Just Perfect! We are in Secure Environment</string>
+    <string name="insecure_msg">Security is good enough, but some issue exist</string>
+    <string name="completely_insecure_msg">Security violation detected</string>
+
+    <!--Lock Check strings -->
+    <string name="lock_exit">Çıkış yap</string>
+    <string name="lock_settings">Ayarlar</string>
+    <string name="lock_title">Ekran Kilidi</string>
+    <string name="lock_body">Ekran kilidi şifresi gerekmektedir.</string>
+
+    <string name="finger_exit">Çıkış yap</string>
+    <string name="finger_settings">Ayarlar</string>
+    <string name="finger_title">Parmak izi</string>
+    <string name="finger_body">Bu uygulama en az bir tane parmak izi tanımlamayı gerektirir.Devam etmek için ayarlardan parmak izi tanımı yapınız</string>
 </resources>

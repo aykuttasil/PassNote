@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_delete_secret"
+        android:icon="@drawable/ic_delete_forever"
+        android:title="@string/secret_menu_delete"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_edit_secret"
+        android:icon="@drawable/ic_mode_edit"
+        android:title="@string/secret_menu_edit"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_save_secret"
+        android:icon="@drawable/ic_done"
+        android:title="@string/secret_menu_done"
+        app:showAsAction="always" />
+</menu>

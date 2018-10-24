@@ -49,7 +49,7 @@ object NewMessageNotification {
 
         // This image is used as the notification's large icon (thumbnail).
         // TODO: Remove this if your notification has no relevant thumbnail.
-        val picture = BitmapFactory.decodeResource(res, R.drawable.example_picture)
+        val picture = BitmapFactory.decodeResource(res, R.drawable.avd_copy)
 
 
         val title = res.getString(R.string.new_message_notification_title_template, exampleString)
