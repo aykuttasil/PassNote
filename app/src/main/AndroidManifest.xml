@@ -43,6 +43,11 @@
         <activity
             android:name=".ui.addnote.AddNoteActivity"
             android:label="@string/add_secret_title"
+            android:parentActivityName=".ui.notelist.NoteListActivity" />
+
+        <activity
+            android:name=".ui.notelist.NoteListActivity"
+            android:label="Notlar"
             android:parentActivityName=".ui.main.MainActivity" />
 
         <service android:name=".service.AppService" />

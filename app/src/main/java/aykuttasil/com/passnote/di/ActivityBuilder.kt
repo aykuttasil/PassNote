@@ -3,6 +3,7 @@ package aykuttasil.com.passnote.di
 import aykuttasil.com.passnote.ui.addnote.AddNoteActivity
 import aykuttasil.com.passnote.ui.main.MainActivity
 import aykuttasil.com.passnote.ui.main.MainActivityModule
+import aykuttasil.com.passnote.ui.notelist.NoteListActivity
 import aykuttasil.com.passnote.ui.signup.SignUpActivity
 import aykuttasil.com.passnote.ui.splash.SplashActivity
 import aykuttasil.com.passnote.ui.user.UserActivity
@@ -34,6 +35,9 @@ abstract class ActivityBuilder {
     @ContributesAndroidInjector
     internal abstract fun bindAddNoteActivity(): AddNoteActivity
 
+    @PerActivity
+    @ContributesAndroidInjector
+    internal abstract fun bindNoteListActivity(): NoteListActivity
 
     @PerActivity
     @ContributesAndroidInjector(modules = [(UserActivityModule::class)])

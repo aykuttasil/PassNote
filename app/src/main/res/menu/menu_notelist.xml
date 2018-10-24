@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_fingerprint"
+        android:checkable="true"
+        android:title="@string/home_menu_fingerprint"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_reset"
+        android:title="@string/home_menu_reset"
+        app:showAsAction="never" />
+
+</menu>

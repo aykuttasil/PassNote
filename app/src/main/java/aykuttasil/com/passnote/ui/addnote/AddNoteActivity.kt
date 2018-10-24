@@ -23,9 +23,9 @@ import java.util.*
 class AddNoteActivity : BaseActivity() {
 
     companion object {
-        val MODE_CREATE = 1
-        val MODE_VIEW = 2
-        val MODE_EDIT = 3
+        const val MODE_CREATE = 1
+        const val MODE_VIEW = 2
+        const val MODE_EDIT = 3
     }
 
     private val dateFormatter = SimpleDateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT)
