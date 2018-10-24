@@ -1,17 +1,17 @@
 package aykuttasil.com.passnote.util
 
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.AndroidViewModel
+import aykuttasil.com.passnote.App
 import io.reactivex.disposables.CompositeDisposable
 
-/**
- * Created by mertsimsek on 22/11/2017.
- */
-open class RxAwareViewModel : ViewModel() {
+open class RxAwareViewModel(app: App) : AndroidViewModel(app) {
 
-    var disposables = CompositeDisposable()
+    var compositeDisposable = CompositeDisposable()
 
     override fun onCleared() {
         super.onCleared()
-        disposables.dispose()
+        if (!compositeDisposable.isDisposed) {
+            compositeDisposable.dispose()
+        }
     }
 }

@@ -1,31 +1,29 @@
 package aykuttasil.com.passnote.ui.main
 
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import aykuttasil.com.myandroidstructure.data.DataManager
 import aykuttasil.com.passnote.App
 import aykuttasil.com.passnote.data.Resource
 import aykuttasil.com.passnote.data.local.entity.UserEntity
-import io.reactivex.disposables.CompositeDisposable
+import aykuttasil.com.passnote.util.RxAwareViewModel
+import aykuttasil.com.myandroidstructure.data.DataManager
 import javax.inject.Inject
 
 /**
  * Created by aykutasil on 27.12.2017.
  */
-class MainViewModel @Inject constructor(val app: App, private val dataManager: DataManager) : AndroidViewModel(app) {
+class MainViewModel @Inject constructor(val app: App, private val dataManager: DataManager) : RxAwareViewModel(app) {
 
-    private var compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     private val liveUserName: MutableLiveData<String> = MutableLiveData()
 
 
     fun getUser(username: String): LiveData<Resource<UserEntity>> {
         liveUserName.postValue(username)
-        return Transformations.switchMap(liveUserName, {
+        return Transformations.switchMap(liveUserName) {
             dataManager.getUser(it)
-        })
+        }
     }
 
     fun retryGetUser(username: String) {
@@ -66,11 +64,4 @@ class MainViewModel @Inject constructor(val app: App, private val dataManager: D
         }.asFlowable()
     }*/
 
-
-    override fun onCleared() {
-        super.onCleared()
-        if (!compositeDisposable.isDisposed) {
-            compositeDisposable.dispose()
-        }
-    }
 }

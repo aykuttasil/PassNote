@@ -2,17 +2,19 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 28
+
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -42,25 +44,25 @@ android {
         finalProduction {
             dimension "default"
             applicationId "aykuttasil.com.passnote"
-            resValue "string", "app_name", "My ViewModel Skeleton"
+            resValue "string", "app_name", "PassNote"
         }
 
         demoProduction {
             dimension "default"
             applicationId "aykuttasil.com.passnote.demoproduction"
-            resValue "string", "app_name", "My ViewModel Skeleton P"
+            resValue "string", "app_name", "PassNote Demo"
         }
 
         demoTesting {
             dimension "default"
             applicationId "aykuttasil.com.passnote.demotesting"
-            resValue "string", "app_name", "My ViewModel Skeleton T"
+            resValue "string", "app_name", "PassNote Test"
         }
 
         mock {
             dimension "default"
             applicationId "aykuttasil.com.passnote.mock"
-            resValue "string", "app_name", "My ViewModel Skeleton Mock"
+            resValue "string", "app_name", "PassNote Mock"
         }
     }
 
@@ -95,7 +97,7 @@ dependencies {
 
     // Test
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta02'
 
 
     releaseImplementation "com.github.ajitsing:sherlock-no-op:1.0.4@aar"
@@ -111,38 +113,36 @@ dependencies {
     implementation "com.facebook.stetho:stetho-okhttp3:1.5.0"
 
     // DataBinding
-    kapt 'androidx.databinding:databinding-compiler:3.2.0-beta05'
+    kapt 'androidx.databinding:databinding-compiler:3.2.1'
 
-    // Support
-    def supportVersion = "27.1.1"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.core:core:1.0.0-beta01'
-    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01'
-    implementation 'androidx.cardview:cardview:1.0.0-beta01'
-    implementation 'com.google.android.material:material:1.0.0-beta01'
-    implementation "androidx.annotation:annotation:1.0.0-beta01"
-    implementation 'androidx.gridlayout:gridlayout:1.0.0-beta01'
-    implementation "androidx.constraintlayout:constraintlayout:2.0.0-alpha1"
+    // AndroidX
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.core:core:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation "androidx.annotation:annotation:1.0.0"
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
     implementation "androidx.multidex:multidex:2.0.0"
 
     // Http
     implementation "com.squareup.moshi:moshi-adapters:1.5.0"
-    implementation "com.squareup.retrofit2:converter-gson:2.3.0"
-    implementation "com.squareup.retrofit2:retrofit:2.3.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.4.0"
+    implementation "com.squareup.retrofit2:retrofit:2.4.0"
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
-    implementation "com.squareup.okhttp3:logging-interceptor:3.9.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"
 
     // Play Services - Firebase
-    def playServiceVersion = "15.0.1"
-    implementation "com.google.android.gms:play-services-base:$playServiceVersion"
-    implementation "com.google.android.gms:play-services-auth:$playServiceVersion"
-    implementation "com.google.android.gms:play-services-maps:$playServiceVersion"
-    implementation "com.google.android.gms:play-services-location:$playServiceVersion"
-    implementation "com.google.android.gms:play-services-places:$playServiceVersion"
+    implementation "com.google.android.gms:play-services-base:16.0.1"
+    implementation "com.google.android.gms:play-services-auth:16.0.1"
+    implementation "com.google.android.gms:play-services-maps:16.0.0"
+    implementation "com.google.android.gms:play-services-location:16.0.0"
+    implementation "com.google.android.gms:play-services-places:16.0.0"
 
-    def firebaseVersion = "16.0.1"
-    implementation "com.google.firebase:firebase-database:$firebaseVersion"
+    // Firebase
+    implementation "com.google.firebase:firebase-database:16.0.3"
 
     // Dagger
     def daggerVersion = "2.16"
@@ -153,18 +153,18 @@ dependencies {
 
     // Android Arch
     // LiveData - ViewModel
-    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0-beta01"
-    implementation "androidx.lifecycle:lifecycle-reactivestreams:2.0.0-beta01"
-    implementation "androidx.room:room-runtime:2.0.0-beta01"
-    kapt "androidx.room:room-compiler:2.0.0-beta01"
-    implementation "androidx.room:room-rxjava2:2.0.0-beta01"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:2.0.0"
+    implementation "androidx.room:room-runtime:2.1.0-alpha01"
+    kapt "androidx.room:room-compiler:2.1.0-alpha01"
+    implementation "androidx.room:room-rxjava2:2.1.0-alpha01"
     // implementation "android.arch.paging:runtime:1.0.0-alpha4-1"
     // Navigation
-    def navigation_version = "1.0.0-alpha04"
+    def navigation_version = "1.0.0-alpha06"
     implementation "android.arch.navigation:navigation-fragment:$navigation_version"
     implementation "android.arch.navigation:navigation-ui:$navigation_version"
 
-    def work_version = "1.0.0-alpha06"
+    def work_version = "1.0.0-alpha10"
     implementation "android.arch.work:work-runtime-ktx:$work_version" // use -ktx for Kotlin
     // optional - Firebase JobDispatcher support
     implementation "android.arch.work:work-firebase:$work_version"
@@ -172,27 +172,13 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
     // Anko
     // (including Commons, Layouts, SQLite)
     implementation "org.jetbrains.anko:anko:$anko_version"
 
-    // Anko Commons
-    // implementation "org.jetbrains.anko:anko-commons:$anko_version"
-    // Anko Layouts
-    // implementation "org.jetbrains.anko:anko-sdk25:$anko_version" // sdk15, sdk19, sdk21, sdk23 are also available
-    // implementation "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
-    // Coroutine listeners for Anko Layouts
-    // implementation "org.jetbrains.anko:anko-sdk25-coroutines:$anko_version"
-    // implementation "org.jetbrains.anko:anko-appcompat-v7-coroutines:$anko_version"
-    // Anko SQLite
-    // compile "org.jetbrains.anko:anko-sqlite:$anko_version"
-
-    // Coroutines
-    // implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.22.3"
-    // implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.22.3"
-
     // Kotlin Extensions
-    implementation 'androidx.core:core-ktx:1.0.0-beta01'
+    implementation 'androidx.core:core-ktx:1.0.0'
     // implementation 'androidx.core:core-ktx:1.0.0-alpha1'
 
     // Rx
@@ -210,7 +196,7 @@ dependencies {
     //implementation "com.github.bumptech.glide:okhttp3-integration:4.7.1"
 
     // Timber
-    implementation "com.jakewharton.timber:timber:4.7.0"
+    implementation "com.jakewharton.timber:timber:4.7.1"
 
 }
 

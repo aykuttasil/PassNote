@@ -2,7 +2,6 @@ package aykuttasil.com.passnote.ui.main
 
 import android.content.Context
 import aykuttasil.com.passnote.di.ActivityContext
-import aykuttasil.com.passnote.ui.common.NavigationController
 import dagger.Module
 import dagger.Provides
 
@@ -18,9 +17,5 @@ class MainActivityModule {
         return context
     }
 
-    @ActivityContext
-    @Provides
-    fun providerNavigationController(mainActivity: MainActivity): NavigationController {
-        return NavigationController(mainActivity)
-    }
+
 }

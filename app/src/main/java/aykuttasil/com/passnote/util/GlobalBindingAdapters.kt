@@ -3,6 +3,7 @@ package aykuttasil.com.passnote.util
 import androidx.databinding.BindingAdapter
 import android.view.View
 
+
 /**
  * Created by aykutasil on 19.12.2017.
  */
