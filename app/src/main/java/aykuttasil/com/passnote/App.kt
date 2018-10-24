@@ -11,12 +11,15 @@ import androidx.multidex.MultiDex
 import aykuttasil.com.passnote.di.AppInjector
 import aykuttasil.com.passnote.util.Const
 import aykuttasil.com.passnote.util.extension.debug
+import com.crashlytics.android.Crashlytics
 import com.facebook.stetho.Stetho
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
+import io.fabric.sdk.android.Fabric
 import org.jetbrains.anko.notificationManager
 import timber.log.Timber
 import javax.inject.Inject
+
 
 @SuppressLint("Registered")
 open class App : Application(), HasActivityInjector {
@@ -27,11 +30,17 @@ open class App : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
         AppInjector.init(this)
+        initFabric()
         initNotificationChannel()
+
         debug {
             Stetho.initializeWithDefaults(this)
             Timber.plant(Timber.DebugTree())
         }
+    }
+
+    private fun initFabric() {
+        Fabric.with(this, Crashlytics())
     }
 
     private fun initNotificationChannel() {

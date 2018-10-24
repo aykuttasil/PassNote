@@ -1,8 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
+
 
 android {
     compileSdkVersion 28
@@ -197,6 +199,10 @@ dependencies {
 
     // Timber
     implementation "com.jakewharton.timber:timber:4.7.1"
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
+        transitive = true
+    }
 
 }
 
