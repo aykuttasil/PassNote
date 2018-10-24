@@ -12,6 +12,7 @@ import aykuttasil.com.passnote.di.AppInjector
 import aykuttasil.com.passnote.util.Const
 import aykuttasil.com.passnote.util.extension.debug
 import com.crashlytics.android.Crashlytics
+import com.crashlytics.android.core.CrashlyticsCore
 import com.facebook.stetho.Stetho
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -30,7 +31,7 @@ open class App : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
         AppInjector.init(this)
-        initFabric()
+        initializeFabric()
         initNotificationChannel()
 
         debug {
@@ -39,8 +40,16 @@ open class App : Application(), HasActivityInjector {
         }
     }
 
-    private fun initFabric() {
-        Fabric.with(this, Crashlytics())
+    private fun initializeFabric() {
+        val crashlyticsCore = CrashlyticsCore.Builder()
+                .disabled(BuildConfig.DEBUG)
+                .build()
+
+        val crashlytics = Crashlytics.Builder()
+                .core(crashlyticsCore)
+                .build()
+
+        Fabric.with(this, crashlytics)
     }
 
     private fun initNotificationChannel() {
