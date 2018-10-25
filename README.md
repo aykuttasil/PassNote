@@ -1,4 +1,1 @@
-# Android Project Skeleton
-
-
-Clone and ready.
+# PassNote app source
