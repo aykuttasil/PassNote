@@ -31,7 +31,7 @@ class AuthenticationDialog : AppCompatDialogFragment(), AuthenticationFingerprin
      */
     var cryptoObjectToAuthenticateWith: FingerprintManager.CryptoObject? = null
 
-    var authenticationFingerprint: AuthenticationFingerprint? = null
+    private var authenticationFingerprint: AuthenticationFingerprint? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -135,8 +135,8 @@ class AuthenticationDialog : AppCompatDialogFragment(), AuthenticationFingerprin
         updateStage()
 
         passwordView.requestFocus()
-        // Show the keyboard.
 
+        // Show the keyboard.
         passwordView.showKeyboard(delay = 500)
 
         // Fingerprint is not used anymore. Stop listening for it.
