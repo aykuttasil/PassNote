@@ -21,7 +21,6 @@ import org.jetbrains.anko.notificationManager
 import timber.log.Timber
 import javax.inject.Inject
 
-
 @SuppressLint("Registered")
 open class App : Application(), HasActivityInjector {
 
@@ -67,5 +66,4 @@ open class App : Application(), HasActivityInjector {
         super.attachBaseContext(base)
         MultiDex.install(this)
     }
-
 }

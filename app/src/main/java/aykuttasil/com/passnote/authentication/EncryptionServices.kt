@@ -19,7 +19,6 @@ class EncryptionServices(context: Context) {
      */
     companion object {
         const val DEFAULT_KEY_STORE_NAME = "default_keystore"
-
         const val MASTER_KEY = "MASTER_KEY"
         const val FINGERPRINT_KEY = "FINGERPRINT_KEY"
         const val CONFIRM_CREDENTIALS_KEY = "CONFIRM_CREDENTIALS_KEY"

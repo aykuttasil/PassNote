@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
 import aykuttasil.com.passnote.R
 import aykuttasil.com.passnote.authentication.AuthenticationDialog
 import aykuttasil.com.passnote.authentication.EncryptionServices
@@ -15,9 +14,6 @@ import aykuttasil.com.passnote.data.Storage
 import aykuttasil.com.passnote.ui.addnote.AddNoteActivity
 import aykuttasil.com.passnote.ui.common.BaseSecureActivity
 import aykuttasil.com.passnote.ui.signup.SignUpActivity
-import aykuttasil.com.passnote.util.extension.openSecuritySettings
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_notelist.*
 
 @Suppress("DEPRECATION")
 class NoteListActivity : BaseSecureActivity() {
