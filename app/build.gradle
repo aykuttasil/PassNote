@@ -23,6 +23,7 @@ android {
     if (keystorePropertiesFile.exists()) {
         keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
     }
+    /*
     signingConfigs {
         config {
             keyAlias keystoreProperties['keyAlias']
@@ -31,6 +32,7 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
+    */
 
     buildTypes {
         debug {
@@ -39,7 +41,7 @@ android {
 
         release {
             minifyEnabled false
-            signingConfig signingConfigs.config
+            // signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
