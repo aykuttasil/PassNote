@@ -64,7 +64,7 @@ class AuthenticationDialog : AppCompatDialogFragment(), AuthenticationFingerprin
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dialog.setTitle(getString(R.string.authentication_title))
+        dialog?.setTitle(getString(R.string.authentication_title))
         cancelButtonView.setOnClickListener { dismiss() }
         secondButtonView.setOnClickListener { if (stage == Stage.FINGERPRINT) goToBackup() else verifyPassword() }
         passwordView.setOnEditorActionListener { _, actionId, _ -> onEditorAction(actionId) }

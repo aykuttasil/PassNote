@@ -12,7 +12,7 @@ import aykuttasil.com.passnote.ui.common.BaseSecureFragment
 import aykuttasil.com.passnote.ui.notelist.NoteListActivity
 import aykuttasil.com.passnote.util.delegates.Inflate
 import kotlinx.android.synthetic.main.fragment_main.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
+import org.jetbrains.anko.sdk27.coroutines.onClick
 
 class MainFragment : BaseSecureFragment(), Injectable {
 
@@ -25,7 +25,7 @@ class MainFragment : BaseSecureFragment(), Injectable {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btnNoteList.onClick {
-            startActivity(Intent(getContext()?.applicationContext, NoteListActivity::class.java))
+            startActivity(Intent(context?.applicationContext, NoteListActivity::class.java))
         }
     }
 }

@@ -37,6 +37,7 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
+            applicationIdSuffix ".debug"
         }
 
         release {
@@ -48,28 +49,14 @@ android {
 
     flavorDimensions "default"
     productFlavors {
-        finalProduction {
+        prod {
             dimension "default"
-            applicationId "aykuttasil.com.passnote"
             resValue "string", "app_name", "PassNote"
         }
 
-        demoProduction {
+        dev {
             dimension "default"
-            applicationId "aykuttasil.com.passnote.demoproduction"
-            resValue "string", "app_name", "PassNote Demo"
-        }
-
-        demoTesting {
-            dimension "default"
-            applicationId "aykuttasil.com.passnote.demotesting"
-            resValue "string", "app_name", "PassNote Test"
-        }
-
-        mock {
-            dimension "default"
-            applicationId "aykuttasil.com.passnote.mock"
-            resValue "string", "app_name", "PassNote Mock"
+            resValue "string", "app_name", "PassNote Dev"
         }
     }
 
@@ -111,9 +98,6 @@ android {
 }
 
 kotlin {
-    experimental {
-        coroutines "enable"
-    }
 }
 
 dependencies {
@@ -121,7 +105,7 @@ dependencies {
 
     // Test
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1-beta01'
     releaseImplementation 'com.github.ajitsing:sherlock-no-op:1.0.4@aar'
     releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
     debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
@@ -138,22 +122,22 @@ dependencies {
 
     // AndroidX
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core:1.0.1'
-    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.core:core:1.1.0-alpha02'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0-alpha01'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha01'
+    implementation 'androidx.annotation:annotation:1.0.1'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
     implementation 'androidx.multidex:multidex:2.0.0'
 
     // Http
-    implementation 'com.squareup.moshi:moshi-adapters:1.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.squareup.moshi:moshi-adapters:1.8.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 
     // Play Services - Firebase
     implementation 'com.google.android.gms:play-services-base:16.0.1'
@@ -173,38 +157,32 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
 
     // Android Arch
-
     // LiveData - ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     implementation 'androidx.lifecycle:lifecycle-reactivestreams:2.0.0'
-    implementation 'androidx.room:room-runtime:2.1.0-alpha02'
-    kapt "androidx.room:room-compiler:2.1.0-alpha02"
-    implementation 'androidx.room:room-rxjava2:2.1.0-alpha02'
-
-    // implementation "android.arch.paging:runtime:1.0.0-alpha4-1"
+    implementation 'androidx.room:room-runtime:2.1.0-alpha03'
+    kapt "androidx.room:room-compiler:2.1.0-alpha03"
+    implementation 'androidx.room:room-rxjava2:2.1.0-alpha03'
 
     // Navigation
-    def navigation_version = "1.0.0-alpha07"
+    def navigation_version = "1.0.0-alpha08"
     implementation "android.arch.navigation:navigation-fragment:$navigation_version"
     implementation "android.arch.navigation:navigation-ui:$navigation_version"
 
-    def work_version = "1.0.0-alpha11"
+    def work_version = "1.0.0-alpha12"
     implementation "android.arch.work:work-runtime-ktx:$work_version"
-    implementation "android.arch.work:work-firebase:$work_version"
+    implementation "android.arch.work:work-firebase:1.0.0-alpha11"
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     // Anko
-
     // (including Commons, Layouts, SQLite)
     implementation "org.jetbrains.anko:anko:$anko_version"
 
     // Kotlin Extensions
     implementation 'androidx.core:core-ktx:1.0.1'
-
-    // implementation 'androidx.core:core-ktx:1.0.0-alpha1'
 
     // Rx
     implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
@@ -212,20 +190,12 @@ dependencies {
     implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
 
     // Butterknife
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    kapt "com.jakewharton:butterknife-compiler:8.8.1"
-
-    // Glide
-
-    //implementation "com.github.bumptech.glide:glide:4.7.1"
-
-    //kapt "com.github.bumptech.glide:compiler:4.7.1"
-
-    //implementation "com.github.bumptech.glide:okhttp3-integration:4.7.1"
+    implementation 'com.jakewharton:butterknife:9.0.0-rc2'
+    kapt 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
 
     // Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
-    implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.7@aar') {
         transitive = true
     }
 }
