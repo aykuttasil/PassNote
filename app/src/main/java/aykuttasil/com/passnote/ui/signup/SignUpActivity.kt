@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import androidx.biometrics.BiometricPrompt
 import aykuttasil.com.passnote.R
 import aykuttasil.com.passnote.authentication.EncryptionServices
 import aykuttasil.com.passnote.data.Storage
@@ -15,6 +16,7 @@ import aykuttasil.com.passnote.util.extension.hideKeyboard
 import aykuttasil.com.passnote.util.extension.openSecuritySettings
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_sign_up.*
+import java.util.concurrent.Executor
 
 /**
  * Sign up with password screen.
@@ -119,4 +121,23 @@ class SignUpActivity : BaseSecureActivity() {
     }
 
     private fun isPasswordValid(password: String) = !TextUtils.isEmpty(password) && password.length >= 6
+
+    fun a() {
+        val biometricPrompt = BiometricPrompt(this, Executor {
+
+        }, object : BiometricPrompt.AuthenticationCallback() {
+            override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                super.onAuthenticationSucceeded(result)
+            }
+
+            override fun onAuthenticationFailed() {
+                super.onAuthenticationFailed()
+            }
+        })
+
+        val promptInfo = BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Haydi Bakalım")
+                .build()
+        biometricPrompt.authenticate(promptInfo)
+    }
 }

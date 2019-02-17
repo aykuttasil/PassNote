@@ -17,5 +17,4 @@ class MainActivityModule {
         return context
     }
 
-
 }

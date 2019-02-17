@@ -11,7 +11,7 @@ import javax.crypto.spec.IvParameterSpec
  * @throws RuntimeException if there is no algorithm defined with [transformation]
  * @throws RuntimeException if there is no padding defined with [transformation]
  */
-class CipherWrapper(val transformation: String) {
+class CipherWrapper(private val transformation: String) {
 
     companion object {
         /**

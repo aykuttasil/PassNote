@@ -10,7 +10,6 @@ import androidx.annotation.RequiresApi
 import aykuttasil.com.passnote.R
 import aykuttasil.com.passnote.util.SystemServices
 
-@Suppress("DEPRECATION")
 class AuthenticationFingerprint(
         private val systemServices: SystemServices,
         private val view: AuthenticationFingerprintView,
